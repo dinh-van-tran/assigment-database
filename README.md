@@ -18,6 +18,7 @@ Quản lý thiết bị văn phòng
 
 # Phase 1
 ## Requirement
-1. Viết script database tạo 3 table: DeviceType, Device, Account
-2. Tạo form login
+1. Viết script database tạo 3 table: DeviceType, Device, Account: DONE
+2. Tạo form login: DONE
 3. Tạo form nhập device type
+4. Kết nối form login với database. Chỉ cho phép username và password trong bảng Account mới được login.
