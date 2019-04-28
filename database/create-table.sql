@@ -16,7 +16,13 @@ CREATE TABLE Device(
 
 CREATE TABLE Account(
 	Id INT IDENTITY(1,1) PRIMARY KEY,
+	Username VARCHAR(100) NOT NULL,
 	Name NVARCHAR(100) NOT NULL,
+	Password VARCHAR(100) NOT NULL,
 	CreatedDate DATETIME DEFAULT CURRENT_TIMESTAMP,
 	UpdatedDate DATETIME DEFAULT CURRENT_TIMESTAMP
 )
+
+INSERT INTO Account(Username, Name, Password) VALUES ('dinh', N'Định Trần', '123');
+INSERT INTO Account(Username, Name, Password) VALUES ('hai', N'Hải Nguyễn', '123');
+INSERT INTO Account(Username, Name, Password) VALUES ('khang', N'Khang', '123');

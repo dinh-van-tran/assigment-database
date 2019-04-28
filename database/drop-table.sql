@@ -1,0 +1,3 @@
+DROP TABLE Account;
+DROP TABLE Device;
+DROP TABLE DeviceType;
