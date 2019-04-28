@@ -15,3 +15,9 @@ Quản lý thiết bị văn phòng
 
 # Dealine
 04/06/2019
+
+# Phase 1
+## Requirement
+1. Viết script database tạo 3 table: DeviceType, Device, Account
+2. Tạo form login
+3. Tạo form nhập device
