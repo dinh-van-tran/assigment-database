@@ -20,4 +20,8 @@ Quản lý thiết bị văn phòng
 ## Requirement
 1. Viết script database tạo 3 table: DeviceType, Device, Account
 2. Tạo form login
+	-thông tin bản 
+			+ Tên Đăng Nhập 
+				-name:txtl
+			+Mật Khẩu 
 3. Tạo form nhập device type
