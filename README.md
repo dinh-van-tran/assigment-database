@@ -22,3 +22,4 @@ Quản lý thiết bị văn phòng
 2. Tạo form login: DONE
 3. Tạo form nhập device type
 4. Kết nối form login với database. Chỉ cho phép username và password trong bảng Account mới được login.
+5. done
