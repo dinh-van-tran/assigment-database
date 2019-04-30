@@ -17,9 +17,15 @@ namespace AssignmentDatabase
             InitializeComponent();
         }
 
-        private void Thietbi_Load(object sender, EventArgs e)
+        private void addButton_Click(object sender, EventArgs e)
         {
-            
+            string code = codeTextbox.Text.Trim();
+            string name = nameTextbox.Text.Trim();
+            string description = descriptionTextbox.Text.Trim();
+
+            Connection connection = new Connection();
+            connection.ExcuteQuery("INSERT INTO DeviceType(Code, Name, Description) VALUES ('"+ code +"', N'" + name +"', N'" + description + "')");
+            connection.Close();
         }
     }
 }
