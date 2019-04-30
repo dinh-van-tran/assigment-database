@@ -1,6 +1,6 @@
 ﻿namespace AssignmentDatabase
 {
-    partial class Thietbi
+    partial class AddDeviceTypeForm
     {
         /// <summary>
         /// Required designer variable.

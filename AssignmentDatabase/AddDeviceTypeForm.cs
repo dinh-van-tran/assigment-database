@@ -10,9 +10,9 @@ using System.Windows.Forms;
 
 namespace AssignmentDatabase
 {
-    public partial class Thietbi : Form
+    public partial class AddDeviceTypeForm : Form
     {
-        public Thietbi()
+        public AddDeviceTypeForm()
         {
             InitializeComponent();
         }
