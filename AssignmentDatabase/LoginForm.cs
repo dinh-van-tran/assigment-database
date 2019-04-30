@@ -44,6 +44,8 @@ namespace AssignmentDatabase
             }
 
             MessageBox.Show("Login Sucess", "Success", MessageBoxButtons.OK, MessageBoxIcon.None);
+
+            connection.Close();
         }
     }
 }
