@@ -1,6 +1,6 @@
 ﻿namespace AssignmentDatabase
 {
-    partial class LoginForm
+    partial class frmlogin
     {
         /// <summary>
         /// Required designer variable.
@@ -29,10 +29,12 @@
         private void InitializeComponent()
         {
             this.label1 = new System.Windows.Forms.Label();
-            this.textBox1 = new System.Windows.Forms.TextBox();
-            this.textBox2 = new System.Windows.Forms.TextBox();
+            this.txtuser = new System.Windows.Forms.TextBox();
+            this.txtpassword = new System.Windows.Forms.TextBox();
             this.label2 = new System.Windows.Forms.Label();
             this.label3 = new System.Windows.Forms.Label();
+            this.btnDangnhap = new System.Windows.Forms.Button();
+            this.btnThoat = new System.Windows.Forms.Button();
             this.SuspendLayout();
             // 
             // label1
@@ -45,19 +47,21 @@
             this.label1.TabIndex = 0;
             this.label1.Text = "Tên  Đăng Nhập :";
             // 
-            // textBox1
+            // txtuser
             // 
-            this.textBox1.Location = new System.Drawing.Point(207, 88);
-            this.textBox1.Name = "textBox1";
-            this.textBox1.Size = new System.Drawing.Size(175, 20);
-            this.textBox1.TabIndex = 1;
+            this.txtuser.Location = new System.Drawing.Point(207, 88);
+            this.txtuser.Name = "txtuser";
+            this.txtuser.Size = new System.Drawing.Size(198, 20);
+            this.txtuser.TabIndex = 1;
             // 
-            // textBox2
+            // txtpassword
             // 
-            this.textBox2.Location = new System.Drawing.Point(207, 130);
-            this.textBox2.Name = "textBox2";
-            this.textBox2.Size = new System.Drawing.Size(181, 20);
-            this.textBox2.TabIndex = 2;
+            this.txtpassword.Location = new System.Drawing.Point(207, 130);
+            this.txtpassword.Name = "txtpassword";
+            this.txtpassword.PasswordChar = '*';
+            this.txtpassword.Size = new System.Drawing.Size(198, 20);
+            this.txtpassword.TabIndex = 2;
+            this.txtpassword.TextChanged += new System.EventHandler(this.textBox2_TextChanged);
             // 
             // label2
             // 
@@ -79,18 +83,41 @@
             this.label3.TabIndex = 4;
             this.label3.Text = "Thông Tin đăng Nhập";
             // 
-            // LoginForm
+            // btnDangnhap
+            // 
+            this.btnDangnhap.Location = new System.Drawing.Point(164, 191);
+            this.btnDangnhap.Name = "btnDangnhap";
+            this.btnDangnhap.Size = new System.Drawing.Size(90, 28);
+            this.btnDangnhap.TabIndex = 7;
+            this.btnDangnhap.Text = "Đăng Nhập";
+            this.btnDangnhap.UseVisualStyleBackColor = true;
+            this.btnDangnhap.Click += new System.EventHandler(this.btnDangnhap_Click);
+            // 
+            // btnThoat
+            // 
+            this.btnThoat.Location = new System.Drawing.Point(315, 191);
+            this.btnThoat.Name = "btnThoat";
+            this.btnThoat.Size = new System.Drawing.Size(90, 28);
+            this.btnThoat.TabIndex = 8;
+            this.btnThoat.Text = "Thoát";
+            this.btnThoat.UseVisualStyleBackColor = true;
+            this.btnThoat.Click += new System.EventHandler(this.btnThoat_Click);
+            // 
+            // frmlogin
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(541, 252);
+            this.ClientSize = new System.Drawing.Size(551, 293);
+            this.Controls.Add(this.btnThoat);
+            this.Controls.Add(this.btnDangnhap);
             this.Controls.Add(this.label3);
             this.Controls.Add(this.label2);
-            this.Controls.Add(this.textBox2);
-            this.Controls.Add(this.textBox1);
+            this.Controls.Add(this.txtpassword);
+            this.Controls.Add(this.txtuser);
             this.Controls.Add(this.label1);
-            this.Name = "LoginForm";
+            this.Name = "frmlogin";
             this.Text = "Form1";
+            this.Load += new System.EventHandler(this.LoginForm_Load);
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -99,10 +126,12 @@
         #endregion
 
         private System.Windows.Forms.Label label1;
-        private System.Windows.Forms.TextBox textBox1;
-        private System.Windows.Forms.TextBox textBox2;
+        private System.Windows.Forms.TextBox txtuser;
+        private System.Windows.Forms.TextBox txtpassword;
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.Label label3;
+        private System.Windows.Forms.Button btnDangnhap;
+        private System.Windows.Forms.Button btnThoat;
     }
 }
 
