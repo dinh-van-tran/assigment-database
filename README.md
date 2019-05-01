@@ -16,6 +16,13 @@ Quản lý thiết bị văn phòng
 # Dealine
 04/06/2019
 
+# Setup
+1. Clone project này về.
+2. Cài SQL Server.
+3. Tạo mới một database tên **Asignment**.
+4. Chạy script **create-table.sql**.
+5. Run project trong visual studio.
+
 # Phase 1
 ## Requirement
 1. Viết script database tạo 3 table: DeviceType, Device, Account: **DONE**
@@ -27,8 +34,8 @@ Quản lý thiết bị văn phòng
 ## Requirement
 1. Tạo form nhập thiết bị. **DONE**
 2. Kết nối form nhập thiết bị với database. **DONE**
-       - Hiện danh sách các loại thiết bị. **DONE**
-       - Thêm mới thiết bị. **DONE** 
+	- Hiện danh sách các loại thiết bị. **DONE**
+	- Thêm mới thiết bị. **DONE** 
 2. ~~Viết code tạo mã tự động.~~ **Xử lý trong phase tiếp theo**
 3. ~~Thêm xử lý lỗi username/password không được rỗng trong Login Form.~~ **Xử lý trong phase tiếp theo**
 4. ~~Thêm xử lý thông báo nhập loại thiết bị thành công.~~ **Xử lý trong phase tiếp theo**
