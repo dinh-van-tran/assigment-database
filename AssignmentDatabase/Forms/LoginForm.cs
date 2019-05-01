@@ -1,4 +1,6 @@
-﻿using System;
+﻿using AssignmentDatabase.Forms;
+using AssignmentDatabase.Models;
+using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
@@ -24,21 +26,14 @@ namespace AssignmentDatabase
             string username = usernameTextBox.Text.Trim();
             string password = passwordTextBox.Text.Trim();
 
-            Connection connection = new Connection();
-            SqlDataReader reader = connection.ExcuteQuery("SELECT * FROM Account WHERE Username = '" + username + "' AND Password = '" + password + "';");
-
-            bool foundUser = reader.HasRows;
-            connection.Close();
-
-            if (!foundUser)
-            {
+            AccountModel accountModel = new AccountModel();
+            if (!accountModel.CheckUserExists(username, password)) {
                 MessageBox.Show("Wrong username or password", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
                 return;
             }
 
-            MessageBox.Show("Login Sucess", "Success", MessageBoxButtons.OK, MessageBoxIcon.None);
-
-
+            ActionForm actionForm = new ActionForm();
+            actionForm.Show();
         }
     }
 }

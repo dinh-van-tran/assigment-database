@@ -18,17 +18,30 @@ Quản lý thiết bị văn phòng
 
 # Phase 1
 ## Requirement
-1. Viết script database tạo 3 table: DeviceType, Device, Account: DONE
-2. Tạo form login: DONE
-3. Tạo form nhập device type: DONE
-4. Kết nối form login với database. Chỉ cho phép username và password trong bảng Account mới được login. DONE
+1. Viết script database tạo 3 table: DeviceType, Device, Account: **DONE**
+2. Tạo form login: **DONE**
+3. Tạo form nhập device type: **DONE**
+4. Kết nối form login với database. Chỉ cho phép username và password trong bảng Account mới được login. **DONE**
 
 # Phase 2
 ## Requirement
-1. Tạo form nhập thiết bị.
-2. Kết nối form nhập thiết bị với database.
-2. Viết code tạo mã tự động.
-3. Thêm xử lý lỗi username/password không được rỗng trong Login Form.
-4. Thêm xử lý thông báo nhập loại thiết bị thành công.
-5. Thêm xử lý thông báo lỗi khi nhập loại thiết bị thất bại do trùng mã code.
-6. Tạo data gridview các loại thiết bị trong tạo loại thiết bị.
+1. Tạo form nhập thiết bị. **DONE**
+2. Kết nối form nhập thiết bị với database. **DONE**
+       - Hiện danh sách các loại thiết bị. **DONE**
+       - Thêm mới thiết bị. **DONE** 
+2. ~~Viết code tạo mã tự động.~~ **Xử lý trong phase tiếp theo**
+3. ~~Thêm xử lý lỗi username/password không được rỗng trong Login Form.~~ **Xử lý trong phase tiếp theo**
+4. ~~Thêm xử lý thông báo nhập loại thiết bị thành công.~~ **Xử lý trong phase tiếp theo**
+5. ~~Thêm xử lý thông báo lỗi khi nhập loại thiết bị thất bại do trùng mã code.~~ **Xử lý trong phase tiếp theo**
+6. ~~Tạo data gridview các loại thiết bị trong tạo loại thiết bị.~~ **Xử lý trong phase tiếp theo**
+
+# Phase 3
+## Requirement
+1. Viết code tạo mã tự động.
+2. Thêm xử lý lỗi username/password không được rỗng trong Login Form.
+3. Thêm xử lý thông báo nhập loại thiết bị thành công.
+4. Thêm xử lý thông báo lỗi khi nhập loại thiết bị thất bại do trùng mã code.
+5. Tạo data gridview các loại thiết bị trong tạo loại thiết bị.
+6. Thêm cột giá trị thiết bị vào database và form.
+7. Thêm cột người sử dụng hiện tại.
+8. Hiển thị danh sách các thiết bị người dùng đang giữ.
