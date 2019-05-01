@@ -40,6 +40,7 @@ namespace AssignmentDatabase
             }
 
             deviceTypeModel.Add(code, name, description);
+            MessageBox.Show("Thêm thành công.", "Success", MessageBoxButtons.OK, MessageBoxIcon.None);
         }
 
         private void refreshGridView()
