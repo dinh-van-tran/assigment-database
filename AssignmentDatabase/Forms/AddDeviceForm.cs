@@ -48,10 +48,12 @@ namespace AssignmentDatabase.Forms
                 return;
             }
 
+            int value = (int)valueUpDown.Value;
+
             string code = codeTextBox.Text.Trim();
             DeviceType selectedType = (DeviceType)selectedItem;
             DeviceModel deviceModel = new DeviceModel();
-            deviceModel.AddDevice(selectedType.Code, code);
+            deviceModel.AddDevice(selectedType.Code, code, value);
         }
     }
 }

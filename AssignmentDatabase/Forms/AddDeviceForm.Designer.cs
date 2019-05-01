@@ -37,7 +37,10 @@
             this.label4 = new System.Windows.Forms.Label();
             this.numberUpDown = new System.Windows.Forms.NumericUpDown();
             this.addDeviceButton = new System.Windows.Forms.Button();
+            this.label5 = new System.Windows.Forms.Label();
+            this.valueUpDown = new System.Windows.Forms.NumericUpDown();
             ((System.ComponentModel.ISupportInitialize)(this.numberUpDown)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.valueUpDown)).BeginInit();
             this.SuspendLayout();
             // 
             // deviceTypeListBox
@@ -93,7 +96,7 @@
             // label4
             // 
             this.label4.AutoSize = true;
-            this.label4.Location = new System.Drawing.Point(148, 194);
+            this.label4.Location = new System.Drawing.Point(148, 226);
             this.label4.Name = "label4";
             this.label4.Size = new System.Drawing.Size(97, 25);
             this.label4.TabIndex = 7;
@@ -101,7 +104,7 @@
             // 
             // numberUpDown
             // 
-            this.numberUpDown.Location = new System.Drawing.Point(309, 192);
+            this.numberUpDown.Location = new System.Drawing.Point(309, 220);
             this.numberUpDown.Name = "numberUpDown";
             this.numberUpDown.Size = new System.Drawing.Size(120, 31);
             this.numberUpDown.TabIndex = 8;
@@ -116,11 +119,29 @@
             this.addDeviceButton.UseVisualStyleBackColor = true;
             this.addDeviceButton.Click += new System.EventHandler(this.addDeviceButton_Click);
             // 
+            // label5
+            // 
+            this.label5.AutoSize = true;
+            this.label5.Location = new System.Drawing.Point(148, 171);
+            this.label5.Name = "label5";
+            this.label5.Size = new System.Drawing.Size(69, 25);
+            this.label5.TabIndex = 10;
+            this.label5.Text = "Giá trị";
+            // 
+            // valueUpDown
+            // 
+            this.valueUpDown.Location = new System.Drawing.Point(309, 169);
+            this.valueUpDown.Name = "valueUpDown";
+            this.valueUpDown.Size = new System.Drawing.Size(120, 31);
+            this.valueUpDown.TabIndex = 12;
+            // 
             // AddDeviceForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(12F, 25F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(800, 450);
+            this.Controls.Add(this.valueUpDown);
+            this.Controls.Add(this.label5);
             this.Controls.Add(this.addDeviceButton);
             this.Controls.Add(this.numberUpDown);
             this.Controls.Add(this.label4);
@@ -134,6 +155,7 @@
             this.Text = "AddDevice";
             this.Load += new System.EventHandler(this.AddDevice_Load);
             ((System.ComponentModel.ISupportInitialize)(this.numberUpDown)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.valueUpDown)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -150,5 +172,7 @@
         private System.Windows.Forms.Label label4;
         private System.Windows.Forms.NumericUpDown numberUpDown;
         private System.Windows.Forms.Button addDeviceButton;
+        private System.Windows.Forms.Label label5;
+        private System.Windows.Forms.NumericUpDown valueUpDown;
     }
 }

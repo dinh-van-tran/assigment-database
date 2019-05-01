@@ -8,10 +8,10 @@ namespace AssignmentDatabase.Models
 {
     public class DeviceModel
     {
-        public void AddDevice(string type, string code)
+        public void AddDevice(string type, string code, int value)
         {
             Connection connection = new Connection();
-            connection.ExcuteQuery("INSERT INTO Device(Type, Code) VALUES ('" + type + "', N'" + code + "')");
+            connection.ExcuteQuery("INSERT INTO Device(Type, Code, Value) VALUES ('" + type + "', N'" + code + "', '" + value + "')");
             connection.Close();
         }
     }

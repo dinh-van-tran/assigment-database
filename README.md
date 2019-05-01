@@ -49,6 +49,6 @@ Quản lý thiết bị văn phòng
 3. Thêm xử lý thông báo nhập loại thiết bị thành công.
 4. Thêm xử lý thông báo lỗi khi nhập loại thiết bị thất bại do trùng mã code.
 5. Tạo data gridview các loại thiết bị trong tạo loại thiết bị. **DONE**
-6. Thêm cột giá trị thiết bị vào database và form.
+6. Thêm cột giá trị thiết bị vào database và form. **DONE**
 7. Thêm cột người sử dụng hiện tại.
 8. Hiển thị danh sách các thiết bị người dùng đang giữ.
