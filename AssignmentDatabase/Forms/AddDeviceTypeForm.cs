@@ -33,6 +33,12 @@ namespace AssignmentDatabase
             string name = nameTextbox.Text.Trim();
             string description = descriptionTextbox.Text.Trim();
 
+            if (deviceTypeModel.CheckExist(code))
+            {
+                MessageBox.Show("Mã thiết bị đã tồn tại", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                return;
+            }
+
             deviceTypeModel.Add(code, name, description);
         }
 

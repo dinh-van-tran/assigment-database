@@ -47,7 +47,7 @@ Quản lý thiết bị văn phòng
 1. Viết code tạo mã tự động.
 2. Thêm xử lý lỗi username/password không được rỗng trong Login Form.
 3. Thêm xử lý thông báo nhập loại thiết bị thành công.
-4. Thêm xử lý thông báo lỗi khi nhập loại thiết bị thất bại do trùng mã code.
+4. Thêm xử lý thông báo lỗi khi nhập loại thiết bị thất bại do trùng mã code. **DONE**
 5. Tạo data gridview các loại thiết bị trong tạo loại thiết bị. **DONE**
 6. Thêm cột giá trị thiết bị vào database và form. **DONE**
 7. Thêm cột người sử dụng hiện tại.

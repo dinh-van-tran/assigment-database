@@ -38,5 +38,16 @@ namespace AssignmentDatabase.Models
 
             return result;
         }
+
+        internal bool CheckExist(string code)
+        {
+            Connection connection = new Connection();
+            SqlDataReader reader = connection.ExcuteQuery("SELECT TOP 1 * FROM DeviceType WHERE Code = '" + code + "';");
+
+            bool found = reader.HasRows;
+            connection.Close();
+
+            return found;
+        }
     }
 }
