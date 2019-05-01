@@ -36,12 +36,14 @@
             this.descriptionTextbox = new System.Windows.Forms.TextBox();
             this.label4 = new System.Windows.Forms.Label();
             this.addButton = new System.Windows.Forms.Button();
+            this.deviceTypeGridView = new System.Windows.Forms.DataGridView();
+            ((System.ComponentModel.ISupportInitialize)(this.deviceTypeGridView)).BeginInit();
             this.SuspendLayout();
             // 
             // codeTextbox
             // 
             this.codeTextbox.Location = new System.Drawing.Point(308, 260);
-            this.codeTextbox.Margin = new System.Windows.Forms.Padding(6, 6, 6, 6);
+            this.codeTextbox.Margin = new System.Windows.Forms.Padding(6);
             this.codeTextbox.Name = "codeTextbox";
             this.codeTextbox.Size = new System.Drawing.Size(366, 31);
             this.codeTextbox.TabIndex = 0;
@@ -71,7 +73,7 @@
             // nameTextbox
             // 
             this.nameTextbox.Location = new System.Drawing.Point(308, 342);
-            this.nameTextbox.Margin = new System.Windows.Forms.Padding(6, 6, 6, 6);
+            this.nameTextbox.Margin = new System.Windows.Forms.Padding(6);
             this.nameTextbox.Name = "nameTextbox";
             this.nameTextbox.Size = new System.Drawing.Size(366, 31);
             this.nameTextbox.TabIndex = 2;
@@ -90,7 +92,7 @@
             // descriptionTextbox
             // 
             this.descriptionTextbox.Location = new System.Drawing.Point(856, 260);
-            this.descriptionTextbox.Margin = new System.Windows.Forms.Padding(6, 6, 6, 6);
+            this.descriptionTextbox.Margin = new System.Windows.Forms.Padding(6);
             this.descriptionTextbox.Multiline = true;
             this.descriptionTextbox.Name = "descriptionTextbox";
             this.descriptionTextbox.Size = new System.Drawing.Size(566, 117);
@@ -117,12 +119,22 @@
             this.addButton.UseVisualStyleBackColor = true;
             this.addButton.Click += new System.EventHandler(this.addButton_Click);
             // 
+            // deviceTypeGridView
+            // 
+            this.deviceTypeGridView.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.deviceTypeGridView.Location = new System.Drawing.Point(22, 496);
+            this.deviceTypeGridView.Name = "deviceTypeGridView";
+            this.deviceTypeGridView.RowTemplate.Height = 33;
+            this.deviceTypeGridView.Size = new System.Drawing.Size(1500, 413);
+            this.deviceTypeGridView.TabIndex = 8;
+            // 
             // AddDeviceTypeForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(12F, 25F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(192)))), ((int)(((byte)(255)))));
             this.ClientSize = new System.Drawing.Size(1534, 921);
+            this.Controls.Add(this.deviceTypeGridView);
             this.Controls.Add(this.addButton);
             this.Controls.Add(this.label4);
             this.Controls.Add(this.label3);
@@ -131,9 +143,11 @@
             this.Controls.Add(this.nameTextbox);
             this.Controls.Add(this.label1);
             this.Controls.Add(this.codeTextbox);
-            this.Margin = new System.Windows.Forms.Padding(6, 6, 6, 6);
+            this.Margin = new System.Windows.Forms.Padding(6);
             this.Name = "AddDeviceTypeForm";
             this.Text = "Thietbi";
+            this.Load += new System.EventHandler(this.AddDeviceTypeForm_Load);
+            ((System.ComponentModel.ISupportInitialize)(this.deviceTypeGridView)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -149,5 +163,6 @@
         private System.Windows.Forms.TextBox descriptionTextbox;
         private System.Windows.Forms.Label label4;
         private System.Windows.Forms.Button addButton;
+        private System.Windows.Forms.DataGridView deviceTypeGridView;
     }
 }

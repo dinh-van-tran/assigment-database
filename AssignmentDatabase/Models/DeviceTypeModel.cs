@@ -19,7 +19,7 @@ namespace AssignmentDatabase.Models
         public List<DeviceType> GetAllDeviceTypes()
         {
             Connection connection = new Connection();
-            SqlDataReader reader = connection.ExcuteQuery("Select Code, Name, Description FROM DeviceType;");
+            SqlDataReader reader = connection.ExcuteQuery("Select * FROM DeviceType;");
 
             List<DeviceType> result = new List<DeviceType>();
             while (reader.Read())
@@ -28,6 +28,8 @@ namespace AssignmentDatabase.Models
                 deviceType.Code = reader["Code"].ToString();
                 deviceType.Name = reader["Name"].ToString();
                 deviceType.Description = reader["Description"].ToString();
+                deviceType.CreatedDate = DateTime.Parse(reader["CreatedDate"].ToString());
+                deviceType.UpdatedDate = DateTime.Parse(reader["UpdatedDate"].ToString());
 
                 result.Add(deviceType);
             }

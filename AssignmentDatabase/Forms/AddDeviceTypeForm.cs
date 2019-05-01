@@ -1,4 +1,5 @@
-﻿using System;
+﻿using AssignmentDatabase.Models;
+using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
@@ -12,6 +13,9 @@ namespace AssignmentDatabase
 {
     public partial class AddDeviceTypeForm : Form
     {
+        private DeviceTypeModel deviceTypeModel = new DeviceTypeModel();
+        private BindingSource bindingSource = new BindingSource();
+
         public AddDeviceTypeForm()
         {
             InitializeComponent();
@@ -19,13 +23,35 @@ namespace AssignmentDatabase
 
         private void addButton_Click(object sender, EventArgs e)
         {
+            addDeviceType();
+            refreshGridView();
+        }
+
+        private void addDeviceType()
+        {
             string code = codeTextbox.Text.Trim();
             string name = nameTextbox.Text.Trim();
             string description = descriptionTextbox.Text.Trim();
 
-            Connection connection = new Connection();
-            connection.ExcuteQuery("INSERT INTO DeviceType(Code, Name, Description) VALUES ('"+ code +"', N'" + name +"', N'" + description + "')");
-            connection.Close();
+            deviceTypeModel.Add(code, name, description);
+        }
+
+        private void refreshGridView()
+        {
+            List<DeviceType> deviceTypes = deviceTypeModel.GetAllDeviceTypes();
+            bindingSource.DataSource = deviceTypes;
+        }
+
+        private void AddDeviceTypeForm_Load(object sender, EventArgs e)
+        {
+            loadDeviceTypesToGridView();
+        }
+
+        private void loadDeviceTypesToGridView()
+        {
+            List<DeviceType> deviceTypes = deviceTypeModel.GetAllDeviceTypes();
+            bindingSource.DataSource = deviceTypes;
+            deviceTypeGridView.DataSource = bindingSource;
         }
     }
 }

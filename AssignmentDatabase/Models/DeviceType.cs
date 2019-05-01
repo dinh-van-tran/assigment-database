@@ -11,6 +11,8 @@ namespace AssignmentDatabase.Models
         private string code;
         private string name;
         private string description;
+        private DateTime createdDate;
+        private DateTime updatedDate;
 
         public string Code
         {
@@ -28,6 +30,18 @@ namespace AssignmentDatabase.Models
         {
             get { return description; }
             set { description = value; }
+        }
+
+        public DateTime CreatedDate
+        {
+            get { return createdDate; }
+            set { createdDate = value; }
+        }
+
+        public DateTime UpdatedDate
+        {
+            get { return updatedDate; }
+            set { updatedDate = value; }
         }
     }
 }
