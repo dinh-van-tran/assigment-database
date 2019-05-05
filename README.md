@@ -38,6 +38,8 @@ Quản lý thiết bị văn phòng
 	- Thêm mới thiết bị. **DONE** 
 2. ~~Viết code tạo mã tự động.~~ **Xử lý trong phase tiếp theo**
 3. ~~Thêm xử lý lỗi username/password không được rỗng trong Login Form.~~ **Xử lý trong phase tiếp theo**
+		+ Check password and uer not empty **DONE**
+		+ Thêm button thoát form login **DONE**
 4. ~~Thêm xử lý thông báo nhập loại thiết bị thành công.~~ **Xử lý trong phase tiếp theo**
 5. ~~Thêm xử lý thông báo lỗi khi nhập loại thiết bị thất bại do trùng mã code.~~ **Xử lý trong phase tiếp theo**
 6. ~~Tạo data gridview các loại thiết bị trong tạo loại thiết bị.~~ **Xử lý trong phase tiếp theo**
