@@ -10,6 +10,7 @@ namespace AssignmentDatabase
     class Connection
     {
         public static string ConnectionString = "Data Source=localhost;Initial Catalog=Assigment;Integrated Security=True";
+
         private SqlConnection connection;
 
         public void Open()
