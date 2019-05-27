@@ -51,6 +51,7 @@ namespace AssignmentDatabase
                    
            ActionForm actionForm = new ActionForm();
             actionForm.ShowDialog();
+            this.Close();
         }
 
         private void ExitButton_Click(object sender, EventArgs e)

@@ -34,9 +34,10 @@
             // 
             // addDeviceTypeButton
             // 
-            this.addDeviceTypeButton.Location = new System.Drawing.Point(70, 23);
+            this.addDeviceTypeButton.Location = new System.Drawing.Point(171, 325);
+            this.addDeviceTypeButton.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.addDeviceTypeButton.Name = "addDeviceTypeButton";
-            this.addDeviceTypeButton.Size = new System.Drawing.Size(133, 89);
+            this.addDeviceTypeButton.Size = new System.Drawing.Size(66, 46);
             this.addDeviceTypeButton.TabIndex = 0;
             this.addDeviceTypeButton.Text = "Thêm loại thiết bị";
             this.addDeviceTypeButton.UseVisualStyleBackColor = true;
@@ -44,9 +45,10 @@
             // 
             // addDeviceButton
             // 
-            this.addDeviceButton.Location = new System.Drawing.Point(311, 23);
+            this.addDeviceButton.Location = new System.Drawing.Point(540, 325);
+            this.addDeviceButton.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.addDeviceButton.Name = "addDeviceButton";
-            this.addDeviceButton.Size = new System.Drawing.Size(133, 89);
+            this.addDeviceButton.Size = new System.Drawing.Size(66, 46);
             this.addDeviceButton.TabIndex = 1;
             this.addDeviceButton.Text = "Thêm thiết bị";
             this.addDeviceButton.UseVisualStyleBackColor = true;
@@ -54,13 +56,14 @@
             // 
             // ActionForm
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(12F, 25F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(800, 450);
+            this.ClientSize = new System.Drawing.Size(823, 454);
             this.Controls.Add(this.addDeviceButton);
             this.Controls.Add(this.addDeviceTypeButton);
+            this.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.Name = "ActionForm";
-            this.Text = "Thao Tác";
+            this.Text = "Phần Mềm Quản Lý Thiết Bị";
             this.ResumeLayout(false);
 
         }
