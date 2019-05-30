@@ -122,6 +122,7 @@
             this.deviceTypeGridView.RowTemplate.Height = 33;
             this.deviceTypeGridView.Size = new System.Drawing.Size(750, 215);
             this.deviceTypeGridView.TabIndex = 8;
+            this.deviceTypeGridView.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.deviceTypeGridView_CellContentClick);
             // 
             // AddDeviceTypeForm
             // 

@@ -14,8 +14,10 @@ namespace AssignmentDatabase
     public partial class AddDeviceTypeForm : Form
     {
         private DeviceTypeModel deviceTypeModel = new DeviceTypeModel();
+        
         private BindingSource bindingSource = new BindingSource();
-
+        
+        
         public AddDeviceTypeForm()
         {
             InitializeComponent();
@@ -59,6 +61,11 @@ namespace AssignmentDatabase
             List<DeviceType> deviceTypes = deviceTypeModel.GetAllDeviceTypes();
             bindingSource.DataSource = deviceTypes;
             deviceTypeGridView.DataSource = bindingSource;
+        }
+
+        private void deviceTypeGridView_CellContentClick(object sender, DataGridViewCellEventArgs e)
+        {
+
         }
     }
 }

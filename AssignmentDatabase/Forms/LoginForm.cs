@@ -25,6 +25,7 @@ namespace AssignmentDatabase
         {
             string username = usernameTextBox.Text.Trim();
             string password = passwordTextBox.Text.Trim();
+            
             //checking username
             if (username == "")
             {
@@ -48,7 +49,7 @@ namespace AssignmentDatabase
             }
             
             //checking username and password empty 
-                   
+            
            ActionForm actionForm = new ActionForm();
             actionForm.ShowDialog();
             this.Close();
@@ -63,6 +64,21 @@ namespace AssignmentDatabase
             }
             else
                 usernameTextBox.Focus();
+        }
+
+        private void passwordTextBox_TextChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void passwordTextBox_KeyDown(object sender, KeyEventArgs e)
+        {
+            if(e.KeyCode == Keys.Enter)
+            {
+                ActionForm actionForm = new ActionForm();
+                actionForm.ShowDialog();
+                this.Close();
+            }
         }
     }
 }

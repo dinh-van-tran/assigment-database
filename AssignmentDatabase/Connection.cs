@@ -4,7 +4,7 @@ using System.Data.SqlClient;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
-
+using System.Data;
 namespace AssignmentDatabase
 {
     class Connection
@@ -36,5 +36,23 @@ namespace AssignmentDatabase
 
             return reader;
         }
+      
+          
+        public  DataTable GetDataToTable(string sql)
+        {
+            Open();
+            SqlDataAdapter MyData = new SqlDataAdapter(); //Định nghĩa đối tượng thuộc lớp SqlDataAdapter
+            //Tạo đối tượng thuộc lớp SqlCommand
+            MyData.SelectCommand = new SqlCommand();
+           
+            MyData.SelectCommand.CommandText = sql; //Lệnh SQL
+            //Khai báo đối tượng table thuộc lớp DataTable
+            DataTable table = new DataTable();
+            MyData.Fill(table);
+            return table;
+        }
+      
+
+
     }
 }

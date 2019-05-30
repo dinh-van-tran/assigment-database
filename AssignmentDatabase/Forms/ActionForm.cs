@@ -28,5 +28,16 @@ namespace AssignmentDatabase.Forms
             AddDeviceForm addDeviceForm = new AddDeviceForm();
             addDeviceForm.Show();
         }
+
+        private void button1_Click(object sender, EventArgs e)
+        {
+            AccountForm Accfrm = new AccountForm();
+            Accfrm.Show();
+        }
+
+        private void button2_Click(object sender, EventArgs e)
+        {
+            Application.Exit();
+        }
     }
 }
