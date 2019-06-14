@@ -9,45 +9,40 @@ namespace AssignmentDatabase.Models
 {
     public class DeviceTypeModel
     {
+        DataClassesDataContext db = new DataClassesDataContext();
+
         public void Add(string code, string name, string description)
         {
-            Connection connection = new Connection();
-            connection.ExcuteQuery("INSERT INTO DeviceType(Code, Name, Description) VALUES ('" + code + "', N'" + name + "', N'" + description + "')");
-            connection.Close();
-        }
+            DeviceType newRow = new DeviceType();
+            newRow.Code = code;
+            newRow.Name = name;
+            newRow.Description = description;
 
+            db.DeviceTypes.InsertOnSubmit(newRow);
+            db.SubmitChanges();
+        }
         public List<DeviceType> GetAllDeviceTypes()
         {
-            Connection connection = new Connection();
-            SqlDataReader reader = connection.ExcuteQuery("Select * FROM DeviceType;");
+            var deviceTypeQuery = from deviceTypes in db.DeviceTypes
+                                  select deviceTypes;
 
             List<DeviceType> result = new List<DeviceType>();
-            while (reader.Read())
+            foreach (var deviceType in deviceTypeQuery)
             {
-                DeviceType deviceType = new DeviceType();
-                deviceType.Code = reader["Code"].ToString();
-                deviceType.Name = reader["Name"].ToString();
-                deviceType.Description = reader["Description"].ToString();
-                deviceType.CreatedDate = DateTime.Parse(reader["CreatedDate"].ToString());
-                deviceType.UpdatedDate = DateTime.Parse(reader["UpdatedDate"].ToString());
-
                 result.Add(deviceType);
             }
-
-            connection.Close();
 
             return result;
         }
 
-        internal bool CheckExist(string code)
+        public bool CheckExist(string code)
         {
-            Connection connection = new Connection();
-            SqlDataReader reader = connection.ExcuteQuery("SELECT TOP 1 * FROM DeviceType WHERE Code = '" + code + "';");
+            if (db.DeviceTypes.Any(deviceType => deviceType.Code == code))
+            {
+                return true;
+            }
 
-            bool found = reader.HasRows;
-            connection.Close();
-
-            return found;
+            return false;
         }
     }
 }
