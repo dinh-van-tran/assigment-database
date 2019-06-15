@@ -82,7 +82,6 @@
     <Compile Include="Forms\LoginForm.Designer.cs">
       <DependentUpon>LoginForm.cs</DependentUpon>
     </Compile>
-    <Compile Include="Models\Account.cs" />
     <Compile Include="Models\AccountModel.cs" />
     <Compile Include="Models\DeviceModel.cs" />
     <Compile Include="Models\DeviceTypeModel.cs" />

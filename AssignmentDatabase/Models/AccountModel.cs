@@ -11,42 +11,36 @@ namespace AssignmentDatabase.Models
 {
     public partial class AccountModel
     {
+        DataClassesDataContext db = new DataClassesDataContext();
+
         public bool CheckUserExists(string username, string password)
         {
-            Connection connection = new Connection();
-            SqlDataReader reader = connection.ExcuteQuery("SELECT * FROM Account WHERE Username = '" + username + "' AND Password = '" + password + "';");
-
-            bool foundUser = reader.HasRows;
-            connection.Close();
-
-            return foundUser;
-        }
-        //lay data lên table 
-        public List<Account> GetAlltableAccount()
-        {
-            Connection conn = new Connection() ;
-            SqlDataReader reader = conn.ExcuteQuery( "SELECT * FROM Account;"); 
-            List<Account> result = new List<Account>();
-            while(reader.Read())
+            if (db.Accounts.Any(account => account.Username == username && account.Password == password))
             {
-                Account account = new Account();
-                account.Username = reader["Username"].ToString();
-                account.Name = reader["Name"].ToString();
-                account.Password = reader["Password"].ToString();
-                account.CreatedDate = DateTime.Parse(reader["CreatedDate"].ToString());
-                account.UpdatedDate = DateTime.Parse(reader["UpdatedDate"].ToString());
+                return true;
+            }
 
+            return false;
+        }
+
+        public List<Account> GetAllAccounts()
+        {
+            var accountQuery = from accounts in db.Accounts
+                                  select accounts;
+
+            List<Account> result = new List<Account>();
+            foreach (var account in accountQuery)
+            {
                 result.Add(account);
             }
-            conn.Close();
+
             return result;
         }
-        //end get data
 
-        public static bool checkkey(string checkUsername)
+        public static bool CheckKey(string username)
         {
             Connection connection = new Connection();
-            SqlDataReader reader = connection.ExcuteQuery("SELECT TOP 1 * FROM Account WHERE Username = '" + checkUsername + "';");
+            SqlDataReader reader = connection.ExcuteQuery("SELECT TOP 1 * FROM Account WHERE Username = '" + username + "';");
 
             bool foundUser = reader.HasRows;
             connection.Close();
@@ -54,34 +48,40 @@ namespace AssignmentDatabase.Models
             return foundUser;
 
         }
-        //tem tài khoan 
-        public void Addaccount(string username, string name, string password)
+
+        public void AddAccount(string username, string name, string password)
         {
-            Connection connection = new Connection();
-            connection.ExcuteQuery("INSERT INTO Account(Username, Name, Password) VALUES ('" + username + "', N'" + name + "', N'" + password + "')");
-            //connection.ExcuteQuery("INSERT INTO DeviceType(Code, Name, Description) VALUES ('" + username + "', N'" + name + "', N'" + password + "')");
-            connection.Close();
+            Account account = new Account();
+            account.Username = username;
+            account.Name = name;
+            account.Password = password;
+
+            db.Accounts.InsertOnSubmit(account);
+            db.SubmitChanges();
         }
 
-        ///update data
-        public void Updateaccount(string username, string name, string password)
+        public void UpdateAccount(string username, string name, string password)
         {
-            Connection connection = new Connection();
-            connection.ExcuteQuery("UPDATE Account SET Name = '" + name + "', Password = '" + password + "' WHERE Username = '" + username + "'");
-           
-            //connection.ExcuteQuery("INSERT INTO DeviceType(Code, Name, Description) VALUES ('" + username + "', N'" + name + "', N'" + password + "')");
-            connection.Close();
-        }
-        //del account
-        public void Deleteaccount(string username)
-        {
-            Connection connection = new Connection();
-            connection.ExcuteQuery("DELETE FROM Account  WHERE Username = '" + username + "'");
+            var row = db.Accounts.First(account => account.Username == username && account.Password == password);
+            if (row == null)
+            {
+                return;
+            }
 
-            //connection.ExcuteQuery("INSERT INTO DeviceType(Code, Name, Description) VALUES ('" + username + "', N'" + name + "', N'" + password + "')");
-            connection.Close();
+            row.Name = name;
+            db.SubmitChanges();
         }
 
+        public void DeleteAccount(string username)
+        {
+            var rows = from account in db.Accounts
+                       where account.Username == username
+                      select account;
 
+            foreach(var row in rows)
+            {
+                db.Accounts.DeleteOnSubmit(row);
+            }
+        }
     }
 }

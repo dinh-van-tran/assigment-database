@@ -42,7 +42,7 @@ namespace AssignmentDatabase.Forms
         public void LoadAccontToGridView()
         {
             List<Account> account = new List<Account>();
-            account = accountModel.GetAlltableAccount();
+            account = accountModel.GetAllAccounts();
             bindingSouce.DataSource = account;
             dataGridView_Account.DataSource = bindingSouce;
          
@@ -51,7 +51,7 @@ namespace AssignmentDatabase.Forms
         public void resetGridview()
         {
             List<Account> account = new List<Account>();
-            account = accountModel.GetAlltableAccount();
+            account = accountModel.GetAllAccounts();
             bindingSouce.DataSource = account;
         }
        //thêm nhan viên mới
@@ -85,14 +85,14 @@ namespace AssignmentDatabase.Forms
                 return;
             }
             //check tai khoan tồn tại
-            if (AccountModel.checkkey(Username))
+            if (AccountModel.CheckKey(Username))
             {
                 MessageBox.Show("Tài Khoản Đấ Có vui lòng chọn tài khoản khác", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Warning);
                 txtUserName.Focus();
                 return;
             }
 
-            accountModel.Addaccount(Username, name, password);
+            accountModel.AddAccount(Username, name, password);
             MessageBox.Show("Thêm nhân viên thành công ","Thông báo");
             txtUserName.Text = "" ;
             txtName.Text = "" ;
@@ -126,7 +126,7 @@ namespace AssignmentDatabase.Forms
             string Username = txtUserName.Text.Trim();
             string name = txtName.Text.Trim();
             string password = txtPassWord.Text.Trim();
-            accountModel.Updateaccount(Username, name, password);
+            accountModel.UpdateAccount(Username, name, password);
             MessageBox.Show("Sữa Thành Công ", "Thông Báo");
         }
 
@@ -136,7 +136,7 @@ namespace AssignmentDatabase.Forms
             DialogResult rs = MessageBox.Show("Bạn Có muốn xóa không ?", "Thông Báo", MessageBoxButtons.YesNo, MessageBoxIcon.Question);
             if (rs == DialogResult.Yes)
             {
-                accountModel.Deleteaccount(Username);
+                accountModel.DeleteAccount(Username);
                 MessageBox.Show("Xóa Thành Công ", "Thông Báo");
                 txtUserName.Text = "";
                 txtName.Text = "";
