@@ -49,6 +49,8 @@
             this.btnDel = new System.Windows.Forms.Button();
             this.btnEdit = new System.Windows.Forms.Button();
             this.accountTableAdapter = new AssignmentDatabase.AssigmentDataSetTableAdapters.AccountTableAdapter();
+            this.label5 = new System.Windows.Forms.Label();
+            this.sumnv = new System.Windows.Forms.TextBox();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView_Account)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.accountBindingSource)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.assigmentDataSet)).BeginInit();
@@ -220,11 +222,29 @@
             // 
             this.accountTableAdapter.ClearBeforeFill = true;
             // 
+            // label5
+            // 
+            this.label5.AutoSize = true;
+            this.label5.Location = new System.Drawing.Point(50, 134);
+            this.label5.Name = "label5";
+            this.label5.Size = new System.Drawing.Size(83, 13);
+            this.label5.TabIndex = 12;
+            this.label5.Text = "Tong nhan Vien";
+            // 
+            // sumnv
+            // 
+            this.sumnv.Location = new System.Drawing.Point(139, 134);
+            this.sumnv.Name = "sumnv";
+            this.sumnv.Size = new System.Drawing.Size(103, 20);
+            this.sumnv.TabIndex = 13;
+            // 
             // AccountForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(699, 517);
+            this.Controls.Add(this.sumnv);
+            this.Controls.Add(this.label5);
             this.Controls.Add(this.btnEdit);
             this.Controls.Add(this.btnDel);
             this.Controls.Add(this.btnAdd);
@@ -273,5 +293,7 @@
         private System.Windows.Forms.DataGridViewTextBoxColumn passwordDataGridViewTextBoxColumn;
         private System.Windows.Forms.DataGridViewTextBoxColumn createdDateDataGridViewTextBoxColumn;
         private System.Windows.Forms.DataGridViewTextBoxColumn updatedDateDataGridViewTextBoxColumn;
+        private System.Windows.Forms.Label label5;
+        private System.Windows.Forms.TextBox sumnv;
     }
 }

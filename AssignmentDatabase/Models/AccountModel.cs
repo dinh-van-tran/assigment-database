@@ -83,5 +83,11 @@ namespace AssignmentDatabase.Models
                 db.Accounts.DeleteOnSubmit(row);
             }
         }
+        public int countid()
+        {
+            var count = db.Accounts.Count();
+            return count;
+
+        }
     }
 }

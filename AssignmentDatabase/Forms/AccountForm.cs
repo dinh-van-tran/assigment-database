@@ -28,6 +28,8 @@ namespace AssignmentDatabase.Forms
             // TODO: This line of code loads data into the 'assigmentDataSet.Account' table. You can move, or remove it, as needed.
             
             LoadAccontToGridView();
+            sumnv.Text = accountModel.countid().ToString();
+            
         }
 
         private void textBox1_TextChanged(object sender, EventArgs e)
