@@ -27,5 +27,11 @@ namespace AssignmentDatabase.Forms
         {
             Application.Exit();
         }
+
+        private void DeviceManagementButton_Click(object sender, EventArgs e)
+        {
+            DeviceManagementForm deviceManagementForm = new DeviceManagementForm();
+            deviceManagementForm.Show();
+        }
     }
 }

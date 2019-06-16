@@ -38,16 +38,16 @@
             // deviceDataView
             // 
             this.deviceDataView.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.deviceDataView.Location = new System.Drawing.Point(12, 29);
+            this.deviceDataView.Location = new System.Drawing.Point(12, 80);
             this.deviceDataView.Name = "deviceDataView";
             this.deviceDataView.RowHeadersWidth = 82;
             this.deviceDataView.RowTemplate.Height = 33;
-            this.deviceDataView.Size = new System.Drawing.Size(776, 313);
+            this.deviceDataView.Size = new System.Drawing.Size(1490, 590);
             this.deviceDataView.TabIndex = 0;
             // 
             // deleteButton
             // 
-            this.deleteButton.Location = new System.Drawing.Point(603, 376);
+            this.deleteButton.Location = new System.Drawing.Point(451, 12);
             this.deleteButton.Name = "deleteButton";
             this.deleteButton.Size = new System.Drawing.Size(185, 37);
             this.deleteButton.TabIndex = 3;
@@ -57,7 +57,7 @@
             // 
             // addButton
             // 
-            this.addButton.Location = new System.Drawing.Point(12, 376);
+            this.addButton.Location = new System.Drawing.Point(12, 12);
             this.addButton.Name = "addButton";
             this.addButton.Size = new System.Drawing.Size(185, 37);
             this.addButton.TabIndex = 4;
@@ -67,7 +67,7 @@
             // 
             // updateButton
             // 
-            this.updateButton.Location = new System.Drawing.Point(294, 376);
+            this.updateButton.Location = new System.Drawing.Point(232, 12);
             this.updateButton.Name = "updateButton";
             this.updateButton.Size = new System.Drawing.Size(185, 37);
             this.updateButton.TabIndex = 5;
@@ -79,7 +79,7 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(12F, 25F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(800, 450);
+            this.ClientSize = new System.Drawing.Size(1514, 695);
             this.Controls.Add(this.updateButton);
             this.Controls.Add(this.addButton);
             this.Controls.Add(this.deleteButton);

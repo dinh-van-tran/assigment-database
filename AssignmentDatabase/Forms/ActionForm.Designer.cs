@@ -28,25 +28,14 @@
         /// </summary>
         private void InitializeComponent()
         {
-            this.addDeviceButton = new System.Windows.Forms.Button();
             this.button1 = new System.Windows.Forms.Button();
             this.button2 = new System.Windows.Forms.Button();
             this.deviceManagementButton = new System.Windows.Forms.Button();
             this.SuspendLayout();
             // 
-            // addDeviceButton
-            // 
-            this.addDeviceButton.Location = new System.Drawing.Point(832, 631);
-            this.addDeviceButton.Margin = new System.Windows.Forms.Padding(4);
-            this.addDeviceButton.Name = "addDeviceButton";
-            this.addDeviceButton.Size = new System.Drawing.Size(252, 127);
-            this.addDeviceButton.TabIndex = 1;
-            this.addDeviceButton.Text = "Thêm thiết bị";
-            this.addDeviceButton.UseVisualStyleBackColor = true;
-            // 
             // button1
             // 
-            this.button1.Location = new System.Drawing.Point(448, 631);
+            this.button1.Location = new System.Drawing.Point(352, 13);
             this.button1.Margin = new System.Windows.Forms.Padding(6);
             this.button1.Name = "button1";
             this.button1.Size = new System.Drawing.Size(270, 127);
@@ -57,7 +46,7 @@
             // 
             // button2
             // 
-            this.button2.Location = new System.Drawing.Point(1170, 631);
+            this.button2.Location = new System.Drawing.Point(693, 13);
             this.button2.Margin = new System.Windows.Forms.Padding(6);
             this.button2.Name = "button2";
             this.button2.Size = new System.Drawing.Size(230, 127);
@@ -68,23 +57,23 @@
             // 
             // deviceManagementButton
             // 
-            this.deviceManagementButton.Location = new System.Drawing.Point(84, 631);
+            this.deviceManagementButton.Location = new System.Drawing.Point(13, 13);
             this.deviceManagementButton.Margin = new System.Windows.Forms.Padding(4);
             this.deviceManagementButton.Name = "deviceManagementButton";
             this.deviceManagementButton.Size = new System.Drawing.Size(274, 127);
             this.deviceManagementButton.TabIndex = 4;
             this.deviceManagementButton.Text = "Quản lý thiết bị";
             this.deviceManagementButton.UseVisualStyleBackColor = true;
+            this.deviceManagementButton.Click += new System.EventHandler(this.DeviceManagementButton_Click);
             // 
             // ActionForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(12F, 25F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(1646, 873);
+            this.ClientSize = new System.Drawing.Size(970, 170);
             this.Controls.Add(this.deviceManagementButton);
             this.Controls.Add(this.button2);
             this.Controls.Add(this.button1);
-            this.Controls.Add(this.addDeviceButton);
             this.Margin = new System.Windows.Forms.Padding(4);
             this.Name = "ActionForm";
             this.Text = "Phần Mềm Quản Lý Thiết Bị";
@@ -93,7 +82,6 @@
         }
 
         #endregion
-        private System.Windows.Forms.Button addDeviceButton;
         private System.Windows.Forms.Button button1;
         private System.Windows.Forms.Button button2;
         private System.Windows.Forms.Button deviceManagementButton;

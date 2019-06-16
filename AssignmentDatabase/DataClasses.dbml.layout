@@ -2,10 +2,10 @@
 <ordesignerObjectsDiagram dslVersion="1.0.0.0" absoluteBounds="0, 0, 11, 8.5" name="DataClasses">
   <DataContextMoniker Name="/DataClassesDataContext" />
   <nestedChildShapes>
-    <classShape Id="b702be9f-bf6e-4940-889e-77e7e9cc2530" absoluteBounds="0.75, 2.25, 2, 2.1554996744791666">
+    <classShape Id="b702be9f-bf6e-4940-889e-77e7e9cc2530" absoluteBounds="1.375, 2.375, 2, 2.1554996744791666">
       <DataClassMoniker Name="/DataClassesDataContext/DeviceView" />
       <nestedChildShapes>
-        <elementListCompartment Id="a88c9ae1-2ad6-406f-b1c1-ac1918bba134" absoluteBounds="0.76500000000000012, 2.71, 1.9700000000000002, 1.5954996744791665" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
+        <elementListCompartment Id="a88c9ae1-2ad6-406f-b1c1-ac1918bba134" absoluteBounds="1.3900000000000001, 2.835, 1.9700000000000002, 1.5954996744791665" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
       </nestedChildShapes>
     </classShape>
     <classShape Id="79775110-86e0-4079-9b56-e3cfc4ee1d20" absoluteBounds="4.125, 2.5, 2, 1.7708968098958331">
@@ -20,7 +20,7 @@
         <elementListCompartment Id="788d74d9-678e-4321-9bfc-ba84aa34e22b" absoluteBounds="4.265, 5.71, 1.9700000000000002, 1.5954996744791665" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
       </nestedChildShapes>
     </classShape>
-    <associationConnector edgePoints="[(5.1875 : 4.27089680989583); (5.1875 : 5.25)]" fixedFrom="Algorithm" fixedTo="Algorithm">
+    <associationConnector edgePoints="[(5.1875 : 4.27089680989583); (5.1875 : 5.25)]" fixedFrom="NotFixed" fixedTo="NotFixed">
       <AssociationMoniker Name="/DataClassesDataContext/Account/Account_Device" />
       <nodes>
         <classShapeMoniker Id="79775110-86e0-4079-9b56-e3cfc4ee1d20" />
@@ -33,7 +33,7 @@
         <elementListCompartment Id="b6b3bcc0-5eea-4f11-8694-4b8567c02a23" absoluteBounds="1.3900000000000001, 5.46, 1.9700000000000002, 1.2108968098958333" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
       </nestedChildShapes>
     </classShape>
-    <associationConnector edgePoints="[(3.375 : 6.01044840494792); (4.25 : 6.01044840494792)]" fixedFrom="Algorithm" fixedTo="Algorithm">
+    <associationConnector edgePoints="[(3.375 : 6.01044840494792); (4.25 : 6.01044840494792)]" fixedFrom="NotFixed" fixedTo="NotFixed">
       <AssociationMoniker Name="/DataClassesDataContext/DeviceType/DeviceType_Device" />
       <nodes>
         <classShapeMoniker Id="10e12b3b-344a-4e7d-b8fb-92f1274de218" />

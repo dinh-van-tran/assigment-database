@@ -17,7 +17,7 @@ namespace AssignmentDatabase
         {
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
-            Application.Run(new AddDeviceForm());
+            Application.Run(new LoginForm());
         }
     }
 }
