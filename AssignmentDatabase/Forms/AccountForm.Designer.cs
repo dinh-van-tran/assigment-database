@@ -136,10 +136,10 @@
             this.createdDateDataGridViewTextBoxColumn,
             this.updatedDateDataGridViewTextBoxColumn});
             this.dataGridView_Account.DataSource = this.accountBindingSource;
-            this.dataGridView_Account.Location = new System.Drawing.Point(12, 165);
+            this.dataGridView_Account.Location = new System.Drawing.Point(12, 217);
             this.dataGridView_Account.Name = "dataGridView_Account";
             this.dataGridView_Account.RowHeadersVisible = false;
-            this.dataGridView_Account.Size = new System.Drawing.Size(669, 327);
+            this.dataGridView_Account.Size = new System.Drawing.Size(669, 275);
             this.dataGridView_Account.TabIndex = 8;
             this.dataGridView_Account.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dataGridView_Account_CellClick);
             // 
@@ -225,7 +225,7 @@
             // label5
             // 
             this.label5.AutoSize = true;
-            this.label5.Location = new System.Drawing.Point(50, 134);
+            this.label5.Location = new System.Drawing.Point(48, 146);
             this.label5.Name = "label5";
             this.label5.Size = new System.Drawing.Size(83, 13);
             this.label5.TabIndex = 12;
@@ -233,10 +233,12 @@
             // 
             // sumnv
             // 
-            this.sumnv.Location = new System.Drawing.Point(139, 127);
+            this.sumnv.Location = new System.Drawing.Point(137, 139);
             this.sumnv.Name = "sumnv";
             this.sumnv.Size = new System.Drawing.Size(103, 20);
             this.sumnv.TabIndex = 13;
+            this.sumnv.Visible = false;
+            this.sumnv.TextChanged += new System.EventHandler(this.sumnv_TextChanged);
             // 
             // AccountForm
             // 

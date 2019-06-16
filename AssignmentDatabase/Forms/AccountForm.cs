@@ -167,5 +167,10 @@ namespace AssignmentDatabase.Forms
 
         }
 
+        private void sumnv_TextChanged(object sender, EventArgs e)
+        {
+
+        }
+
     }
 }
