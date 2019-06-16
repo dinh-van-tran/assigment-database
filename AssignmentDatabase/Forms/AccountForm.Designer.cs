@@ -233,7 +233,7 @@
             // 
             // sumnv
             // 
-            this.sumnv.Location = new System.Drawing.Point(139, 134);
+            this.sumnv.Location = new System.Drawing.Point(139, 127);
             this.sumnv.Name = "sumnv";
             this.sumnv.Size = new System.Drawing.Size(103, 20);
             this.sumnv.TabIndex = 13;
