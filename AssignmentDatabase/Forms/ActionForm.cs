@@ -33,5 +33,17 @@ namespace AssignmentDatabase.Forms
             DeviceManagementForm deviceManagementForm = new DeviceManagementForm();
             deviceManagementForm.Show();
         }
+
+        private void Button3_Click(object sender, EventArgs e)
+        {
+            ReportForm reportForm = new ReportForm();
+            reportForm.Show();
+        }
+
+        private void Button4_Click(object sender, EventArgs e)
+        {
+            AddDeviceTypeForm addDeviceTypeForm = new AddDeviceTypeForm();
+            addDeviceTypeForm.Show();
+        }
     }
 }
