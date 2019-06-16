@@ -23,7 +23,7 @@ namespace AssignmentDatabase.Models
             return false;
         }
 
-        public List<Account> GetAllAccounts()
+        public List<Account> GetAll()
         {
             var accountQuery = from accounts in db.Accounts
                                   select accounts;

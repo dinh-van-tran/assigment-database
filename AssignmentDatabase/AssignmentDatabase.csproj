@@ -76,11 +76,23 @@
     <Compile Include="Forms\AddDeviceForm.Designer.cs">
       <DependentUpon>AddDeviceForm.cs</DependentUpon>
     </Compile>
+    <Compile Include="Forms\DeviceManagementForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\DeviceManagementForm.Designer.cs">
+      <DependentUpon>DeviceManagementForm.cs</DependentUpon>
+    </Compile>
     <Compile Include="Forms\LoginForm.cs">
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="Forms\LoginForm.Designer.cs">
       <DependentUpon>LoginForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\UpdateDeviceForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\UpdateDeviceForm.Designer.cs">
+      <DependentUpon>UpdateDeviceForm.cs</DependentUpon>
     </Compile>
     <Compile Include="Models\AccountModel.cs" />
     <Compile Include="Models\DeviceModel.cs" />
@@ -102,8 +114,14 @@
     <EmbeddedResource Include="Forms\AddDeviceForm.resx">
       <DependentUpon>AddDeviceForm.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="Forms\DeviceManagementForm.resx">
+      <DependentUpon>DeviceManagementForm.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Forms\LoginForm.resx">
       <DependentUpon>LoginForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\UpdateDeviceForm.resx">
+      <DependentUpon>UpdateDeviceForm.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>ResXFileCodeGenerator</Generator>

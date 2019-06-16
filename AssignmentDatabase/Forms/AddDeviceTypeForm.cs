@@ -47,7 +47,7 @@ namespace AssignmentDatabase
 
         private void refreshGridView()
         {
-            List<DeviceType> deviceTypes = deviceTypeModel.GetAllDeviceTypes();
+            List<DeviceType> deviceTypes = deviceTypeModel.GetAll();
             bindingSource.DataSource = deviceTypes;
         }
 
@@ -58,7 +58,7 @@ namespace AssignmentDatabase
 
         private void loadDeviceTypesToGridView()
         {
-            List<DeviceType> deviceTypes = deviceTypeModel.GetAllDeviceTypes();
+            List<DeviceType> deviceTypes = deviceTypeModel.GetAll();
             bindingSource.DataSource = deviceTypes;
             deviceTypeGridView.DataSource = bindingSource;
         }

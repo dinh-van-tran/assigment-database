@@ -63,7 +63,9 @@ namespace AssignmentDatabase
                 Application.Exit();
             }
             else
+            {
                 usernameTextBox.Focus();
+            }
         }
 
         private void passwordTextBox_TextChanged(object sender, EventArgs e)

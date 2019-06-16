@@ -17,22 +17,10 @@ namespace AssignmentDatabase.Forms
             InitializeComponent();
         }
 
-        private void addDeviceTypeButton_Click(object sender, EventArgs e)
-        {
-            AddDeviceTypeForm addDeviceTypeForm = new AddDeviceTypeForm();
-            addDeviceTypeForm.Show();
-        }
-
-        private void addDeviceButton_Click(object sender, EventArgs e)
-        {
-            AddDeviceForm addDeviceForm = new AddDeviceForm();
-            addDeviceForm.Show();
-        }
-
         private void button1_Click(object sender, EventArgs e)
         {
-            AccountForm Accfrm = new AccountForm();
-            Accfrm.Show();
+            AccountForm accountForm = new AccountForm();
+            accountForm.Show();
         }
 
         private void button2_Click(object sender, EventArgs e)

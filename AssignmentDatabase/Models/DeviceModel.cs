@@ -10,23 +10,32 @@ namespace AssignmentDatabase.Models
     {
         DataClassesDataContext db = new DataClassesDataContext();
 
-        public void AddDevice(string type, string code, int value)
+        public void AddDevice(Device device)
         {
-            Device newRow = new Device();
-            newRow.Type = type;
-            newRow.Code = code;
-            newRow.Value = value;
-
-            db.Devices.InsertOnSubmit(newRow);
+            db.Devices.InsertOnSubmit(device);
             db.SubmitChanges();
         }
 
+        public Device GetByCode(string code)
+        {
+            return db.Devices.First(d => d.Code == code);
+        }
 
-        public List<Device> getAllDevices()
+        public IQueryable<DeviceView> GetAllDevices()
+        {
+            var deviceQuery = from device in db.DeviceViews
+                              select device;
+
+            return deviceQuery;
+        }
+
+        public List<Device> GetDevicesByUser(string username)
         {
             var deviceQuery = from device in db.Devices
+                              where device.Owner == username
                               select device;
-            List<Device> result = new List<Device>();
+
+            List <Device> result = new List<Device>();
             foreach(var device in deviceQuery)
             {
                 result.Add(device);
@@ -35,10 +44,21 @@ namespace AssignmentDatabase.Models
             return result;
         }
 
-        public List<Device> getDevicesByUser(string username)
+        public void Update(Device device)
         {
-            List<Device> result = new List<Device>();
-            return result;
+            db.SubmitChanges();
+        }
+
+        public void DeleteDeviceByCode(string code)
+        {
+            var device = db.Devices.First(d => d.Code == code);
+            if (device == null)
+            {
+                return;
+            }
+
+            db.Devices.DeleteOnSubmit(device);
+            db.SubmitChanges();
         }
     }
 }

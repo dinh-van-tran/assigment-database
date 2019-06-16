@@ -17,12 +17,20 @@ CREATE TABLE DeviceType(
 CREATE TABLE Device(
 	Code VARCHAR(20) PRIMARY KEY,
 	Type VARCHAR(10) NOT NULL FOREIGN KEY REFERENCES DeviceType(Code) ON UPDATE CASCADE ON DELETE NO ACTION,
+	Description NVARCHAR(MAX),
 	Value MONEY NOT NULL DEFAULT 0,
 	Owner VARCHAR(100) FOREIGN KEY REFERENCES Account(Username) ON UPDATE CASCADE ON DELETE SET NULL,
 	CreatedDate DATETIME DEFAULT CURRENT_TIMESTAMP,
 	UpdatedDate DATETIME DEFAULT CURRENT_TIMESTAMP
 );
+GO
 
+CREATE View DeviceView
+AS
+SELECT Device.Code, DeviceType.Name AS Type, Device.Description, Device.Value, Account.Name, Device.CreatedDate, Device.UpdatedDate
+FROM Device LEFT JOIN DeviceType ON Device.Type = DeviceType.Code
+     LEFT JOIN Account ON Device.Owner = Account.Username;
+GO
 
 INSERT INTO Account(Username, Name, Password) VALUES ('dinh', N'Định Trần', '123');
 INSERT INTO Account(Username, Name, Password) VALUES ('hai', N'Hải Nguyễn', '123');

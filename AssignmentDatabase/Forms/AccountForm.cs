@@ -42,7 +42,7 @@ namespace AssignmentDatabase.Forms
         public void LoadAccontToGridView()
         {
             List<Account> account = new List<Account>();
-            account = accountModel.GetAllAccounts();
+            account = accountModel.GetAll();
             bindingSouce.DataSource = account;
             dataGridView_Account.DataSource = bindingSouce;
          
@@ -51,7 +51,7 @@ namespace AssignmentDatabase.Forms
         public void resetGridview()
         {
             List<Account> account = new List<Account>();
-            account = accountModel.GetAllAccounts();
+            account = accountModel.GetAll();
             bindingSouce.DataSource = account;
         }
        //thêm nhan viên mới

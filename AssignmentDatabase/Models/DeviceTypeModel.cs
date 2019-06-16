@@ -21,7 +21,7 @@ namespace AssignmentDatabase.Models
             db.DeviceTypes.InsertOnSubmit(newRow);
             db.SubmitChanges();
         }
-        public List<DeviceType> GetAllDeviceTypes()
+        public List<DeviceType> GetAll()
         {
             var deviceTypeQuery = from deviceTypes in db.DeviceTypes
                                   select deviceTypes;
